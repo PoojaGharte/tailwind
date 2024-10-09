@@ -1,85 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Information Portal</title>
-    
+
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-<!--haeder part -->
-<header class="bg-white shadow-md">
-<div class="container mx-auto flex flex-col">
-<div class="flex items-center justify-end py-2 px-6">
-    <div class="flex items-center space-x-4">
-        <a href="tel:+1234567890" class="flex items-center text-gray-600 hover:text-indigo-500">
-            <i class="fas fa-phone-alt mr-2"></i> +1234567890
-        </a>
-        <a href="mailto:info@college.com" class="flex items-center text-gray-600 hover:text-indigo-500">
-            <i class="fas fa-envelope mr-2"></i> info@college.com
-        </a>
-        <div class="flex space-x-2">
-            <a href="https://facebook.com" class="text-blue-600 hover:text-indigo-500">
-                <div class="p-1 bg-white rounded-full">
-                    <i class="fab fa-facebook-f"></i>
+
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header Section -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto">
+            <!-- Contact and Social Media -->
+            <div class="flex justify-between items-center py-2 px-6 border-b border-gray-200 bg-black shadow">
+                <div class="flex space-x-4">
+                    <a href="tel:+1234567890" class="text-gray-200 hover:text-indigo-500 flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i> +1234567890
+                    </a>
+                    <a href="mailto:info@college.com" class="text-gray-200 hover:text-indigo-500 flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> info@college.com
+                    </a>
                 </div>
-            </a>
-            <a href="https://twitter.com" class="text-blue-400 hover:text-indigo-500">
-                <div class="p-1 bg-white rounded-full">
-                    <i class="fab fa-twitter"></i>
+                <div class="flex space-x-3">
+                    <a href="https://linkedin.com" class="text-blue-700 hover:text-indigo-500" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    <a href="https://youtube.com" class="text-red-600 hover:text-indigo-500" aria-label="YouTube">
+                        <i class="fab fa-youtube fa-lg"></i>
+                    </a>
+                    <a href="https://instagram.com" class="text-pink-500 hover:text-indigo-500" aria-label="Instagram">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="https://twitter.com" class="text-blue-400 hover:text-indigo-500" aria-label="Twitter">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </a>
+                    <a href="https://facebook.com" class="text-blue-600 hover:text-indigo-500" aria-label="Facebook">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </a>
                 </div>
-            </a>
-            <a href="https://instagram.com" class="text-pink-500 hover:text-indigo-500">
-                <div class="p-1 bg-white rounded-full">
-                    <i class="fab fa-instagram"></i>
-                </div>
-            </a>
-            <a href="https://linkedin.com" class="text-blue-700 hover:text-indigo-500">
-                <div class="p-1 bg-white rounded-full">
-                    <i class="fab fa-linkedin"></i>
-                </div>
-            </a>
-            <a href="https://youtube.com" class="text-red-600 hover:text-indigo-500">
-                <div class="p-1 bg-white rounded-full">
-                    <i class="fab fa-youtube"></i>
-                </div>
-            </a>
+            </div>
         </div>
-    </div>
-</div>
-<!-- Navigation Menu -->
-    <nav class="bg-white py-2 shadow-md">
-    <div class="container mx-auto flex items-center justify-between px-6">
-    <div class="text-xl font-bold text-gray-800">College Info Portal</div>
-    <ul class="flex space-x-6">
-    <li><a href="#" class="text-gray-600 hover:text-indigo-500">Home</a></li>
-    <li class="group relative">
-        <a href="#" class="text-gray-600 hover:text-indigo-500">Colleges</a>
-        <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-1 rounded-md">
-            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-indigo-100">Public Colleges</a></li>
-            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-indigo-100">Private Colleges</a></li>
-            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-indigo-100">Community Colleges</a></li>
-        </ul>
-    </li>
-    <li><a href="#" class="text-gray-600 hover:text-indigo-500">About Us</a></li>
-    <li><a href="#" class="text-gray-600 hover:text-indigo-500">FAQs</a></li>
-    <li><a href="#" class="text-gray-600 hover:text-indigo-500">Blog</a></li>
-    <li><a href="#" class="text-gray-600 hover:text-indigo-500">Contact Us</a></li>
-    </ul>
-    <div class="flex items-center space-x-4">
-    <a href="#" class="text-gray-600 hover:text-indigo-500">Login</a>
-    <a href="#" class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600">Sign Up</a>
-</div>
-</div>
-</nav>
-</div>
-</header>
 
-    
+        <!-- Navigation Bar -->
+        <nav class="flex justify-between items-center py-4 px-6">
+            <!-- Logo/Brand Name -->
+            <a href="#" class="text-2xl font-bold text-indigo-600">College Info Portal</a>
 
+            <!-- Navigation Menu -->
+            <ul class="flex space-x-6">
+                <li><a href="#" class="text-gray-600 hover:text-indigo-500">Home</a></li>
+                <li class="relative group">
+                    <a href="#" class="text-gray-600 hover:text-indigo-500">Colleges</a>
+                    <ul class="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Public Colleges</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Private Colleges</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Community Colleges</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="text-gray-600 hover:text-indigo-500">About Us</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-indigo-500">FAQs</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-indigo-500">Blog</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-indigo-500">Contact Us</a></li>
+            </ul>
+
+            <!-- Search Bar and Theme Toggle -->
+            <div class="flex items-center space-x-4">
+                <button id="toggleSearch" class="text-gray-600 hover:text-indigo-500 focus:outline-none" aria-label="Toggle Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div id="searchBar" class="relative hidden">
+                    <input type="text" placeholder="Search..." class="border border-gray-300 rounded-md py-2 pl-4 pr-10 focus:outline-none focus:ring focus:ring-indigo-200" aria-label="Search" />
+                    <i class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                </div>
+                <button id="themeToggle" class="text-gray-600 hover:text-indigo-500 focus:outline-none" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#" class="text-gray-600 hover:text-indigo-500">Login</a>
+                <a href="#" class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        // Search Bar Toggle Script
+        const searchButton = document.getElementById('toggleSearch');
+        const searchBar = document.getElementById('searchBar');
+
+        searchButton.addEventListener('click', () => {
+            searchBar.classList.toggle('hidden');
+        });
+
+        // Dark Mode Toggle Script
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('bg-gray-800');
+            document.body.classList.toggle('text-white');
+            document.body.classList.toggle('bg-gray-100');
+            document.body.classList.toggle('text-gray-800');
+            
+            if (themeToggle.innerHTML.includes('moon')) {
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+    </script>
 </body>
+
 </html>
