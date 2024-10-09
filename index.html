@@ -3,11 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This is my taiwind file</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    <title>College Information Portal</title>
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1 class="underline bg-red-500">My Name is Pooja .I am from Manmad .I have completeed my degree in information technology.</h1>
+<body class="bg-gray-100">
+<!--haeder part -->
+<header class="bg-white shadow-md">
+<div class="container mx-auto flex flex-col">
+<div class="flex items-center justify-end py-2 px-6">
+    <div class="flex items-center space-x-4">
+        <a href="tel:+1234567890" class="flex items-center text-gray-600 hover:text-indigo-500">
+            <i class="fas fa-phone-alt mr-2"></i> +1234567890
+        </a>
+        <a href="mailto:info@college.com" class="flex items-center text-gray-600 hover:text-indigo-500">
+            <i class="fas fa-envelope mr-2"></i> info@college.com
+        </a>
+        <div class="flex space-x-2">
+            <a href="https://facebook.com" class="text-blue-600 hover:text-indigo-500">
+                <div class="p-1 bg-white rounded-full">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+            </a>
+            <a href="https://twitter.com" class="text-blue-400 hover:text-indigo-500">
+                <div class="p-1 bg-white rounded-full">
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </a>
+            <a href="https://instagram.com" class="text-pink-500 hover:text-indigo-500">
+                <div class="p-1 bg-white rounded-full">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </a>
+            <a href="https://linkedin.com" class="text-blue-700 hover:text-indigo-500">
+                <div class="p-1 bg-white rounded-full">
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </a>
+            <a href="https://youtube.com" class="text-red-600 hover:text-indigo-500">
+                <div class="p-1 bg-white rounded-full">
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Navigation Menu -->
+    <nav class="bg-white py-2 shadow-md">
+    <div class="container mx-auto flex items-center justify-between px-6">
+    <div class="text-xl font-bold text-gray-800">College Info Portal</div>
+    <ul class="flex space-x-6">
+    <li><a href="#" class="text-gray-600 hover:text-indigo-500">Home</a></li>
+    <li class="group relative">
+        <a href="#" class="text-gray-600 hover:text-indigo-500">Colleges</a>
+        <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-1 rounded-md">
+            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-indigo-100">Public Colleges</a></li>
+            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-indigo-100">Private Colleges</a></li>
+            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-indigo-100">Community Colleges</a></li>
+        </ul>
+    </li>
+    <li><a href="#" class="text-gray-600 hover:text-indigo-500">About Us</a></li>
+    <li><a href="#" class="text-gray-600 hover:text-indigo-500">FAQs</a></li>
+    <li><a href="#" class="text-gray-600 hover:text-indigo-500">Blog</a></li>
+    <li><a href="#" class="text-gray-600 hover:text-indigo-500">Contact Us</a></li>
+    </ul>
+    <div class="flex items-center space-x-4">
+    <a href="#" class="text-gray-600 hover:text-indigo-500">Login</a>
+    <a href="#" class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600">Sign Up</a>
+</div>
+</div>
+</nav>
+</div>
+</header>
+
+    
+
 </body>
 </html>
