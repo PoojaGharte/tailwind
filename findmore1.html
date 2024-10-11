@@ -6,22 +6,90 @@
     <title>Card Layout</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        /* Additional styles for cards */
-        .card {
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        /* Optional: Style for card image */
-        .card-img-top {
-            height: 200px; 
-            object-fit: cover;
-        }
-    </style>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+     <!-- Include Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <!-- Include Owl Carousel CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header Section -->
+    <header style="z-index: 1; position: relative;">
+    <div class="col-md-12 text-white bg-black py-2">
+        <!-- Contact and Social Media -->
+        <div class="container justify-content-between align-items-center d-flex">
+            <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 text-center md:text-left">
+                <a href="tel:+1234567890" class="text-gray-200 hover:text-indigo-500 flex items-center justify-center">
+                    <i class="fas fa-phone-alt mr-2"></i> +1234567890
+                </a>
+                <a href="mailto:info@college.com" class="text-gray-200 hover:text-indigo-500 flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i> info@college.com
+                </a>
+            </div>
+            <div class="flex space-x-8 mt-2 md:mt-0 justify-center">
+                <a href="https://facebook.com" class="text-blue-600 hover:text-indigo-500" aria-label="Facebook">
+                    <i class="fab fa-facebook fa-lg"></i>
+                </a>
+                <a href="https://linkedin.com" class="text-blue-700 hover:text-indigo-500" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a href="https://instagram.com" class="text-pink-500 hover:text-indigo-500" aria-label="Instagram">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+                <a href="https://twitter.com" class="text-blue-400 hover:text-indigo-500" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-lg"></i>
+                </a>
+                <a href="https://youtube.com" class="text-red-600 hover:text-indigo-500" aria-label="YouTube">
+                    <i class="fab fa-youtube fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav id="navbar" class="flex justify-between items-center py-2 px-4 bg-white">
+    <a href="#" class="text-xl font-bold text-indigo-600">College Info Portal</a>
+    <button id="mobileMenuButton" class="block md:hidden text-gray-600 focus:outline-none">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul id="navMenu" class="hidden md:flex space-x-4">
+        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Home</a></li>
+        <li class="relative group">
+            <a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Colleges</a>
+            <ul class="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Public Colleges</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Private Colleges</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Community Colleges</a></li>
+            </ul>
+        </li>
+        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">About Us</a></li>
+        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">FAQs</a></li>
+        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Blog</a></li>
+        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Contact Us</a></li>
+    </ul>
+    <div class="hidden md:flex items-center space-x-2">
+        <button id="toggleSearch" class="text-gray-600 hover:text-indigo-500 focus:outline-none" aria-label="Toggle Search">
+            <i class="fas fa-search"></i>
+        </button>
+        <div id="searchBar" class="relative hidden">
+            <input type="text" placeholder="Search..." class="border border-gray-300 rounded-md py-1 pl-3 pr-8 focus:outline-none focus:ring focus:ring-indigo-200" aria-label="Search" />
+            <i class="fas fa-search absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+        </div>
+        <button id="themeToggle" class="text-gray-600 hover:text-indigo-500 focus:outline-none" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-300 focus:outline-none">
+            Login
+        </button>
+    </div>
+</nav>
+
     <div class="container my-4">
         <h1 class="text-center mb-4">Find more Enginnering College</h1>
         <div class="row">
@@ -172,6 +240,7 @@
     </div>
 
     <!-- Bootstrap JS and dependencies -->
+     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
