@@ -68,4 +68,22 @@ window.addEventListener('scroll', () => {
                 }
             });
         });
+        $('.owl-carousel').owlCarousel({
+            items: 4, // Display 4 cards at once
+            loop: true,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            responsive: {
+                0: {
+                    items: 1 // 1 card for mobile
+                },
+                600: {
+                    items: 2 // 2 cards for small tablets
+                },
+                1000: {
+                    items: 4 // 4 cards for desktops
+                }
+            }
+        });
         
