@@ -16,6 +16,8 @@
      <!-- Include Owl Carousel CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
 </head>
 
 <body class="bg-gray-100 text-gray-800">
@@ -264,67 +266,73 @@
         
     </div>
 </div>
-<section class="text-white bg-black py-5">
-    <div class="container">
-        <div class="row g-3">
-            <div class="col-12 col-md-4 col-lg-3">
-                <ul class="list-unstyled d-flex flex-column gap-2">
+<section class="bg-gray-900 text-white py-4">
+    <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row md:space-x-8">
+            <!-- Logo Section -->
+            <div class="w-full md:w-1/4 mb-4">
+                <h5 class="font-bold text-lg mb-2">Our Logo</h5>
+                <a href="#">
+                    <img src="path/to/logo.svg" alt="Your Project Logo" class="h-10 mb-2">
+                </a>
+                <p class="text-gray-400 text-sm">Your tagline or description.</p>
+            </div>
+            <!-- Quick Links -->
+            <div class="w-full md:w-1/4 mb-4">
+                <h5 class="font-bold text-lg mb-2">Quick Links</h5>
+                <ul class="space-y-1">
                     <li>
-                        <h5>Quick Links</h5>
+                        <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">Contact Us</a>
                     </li>
                     <li>
-                        <a href="#" class="link-secondary text-decoration-none">Contact</a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">About Us</a>
                     </li>
                     <li>
-                        <a href="#" class="link-secondary text-decoration-none">About</a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">Privacy Policy</a>
                     </li>
                     <li>
-                        <a href="#" class="link-secondary text-decoration-none">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="#" class="link-secondary text-decoration-none">Terms & Conditions</a>
-                    </li>
-                    <li>
-                        <a href="#" class="link-secondary text-decoration-none">Refund Policy</a>
-                    </li>
-                    <li>
-                        <a href="#" class="link-secondary text-decoration-none">FAQ's</a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">Terms & Conditions</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-12 col-md-4 col-lg-3 ms-md-auto">
-                <ul class="list-unstyled d-flex flex-column gap-3">
-                    <li class="text-md-end">
-                        <a href="#" class="link-secondary text-decoration-none">
-                            <img src=".." alt="College Portal logo" height="40">
-                        </a>
-                    </li>
-                    <li class="d-flex gap-2 align-items-start">
-                        <i class="bi bi-geo-alt-fill fs-5 flex-shrink-0"></i>
-                        <a href="https://www.google.co.in/maps/search/Office+No.+52,+Inside+of+Shopping+Center,+Near+Shivaji+Vegetable+Market,+Shivaji+Chowk,+Lekha+Nagar,+Old+CIDCO,+Nashik,+Maharashtra+India+-+422009" class="text-muted flex-grow-1 text-decoration-none small" style="text-align: justify;">
-                            Office No. 52, Inside of Shopping Center, Near Shivaji Vegetable Market, Shivaji Chowk, Lekha Nagar, Old CIDCO, Nashik, Maharashtra India - 422009
-                        </a>
-                    </li>
-                    <li class="d-flex gap-2 align-items-center">
-                        <i class="bi bi-envelope-fill fs-5 flex-shrink-0"></i>
-                        <a href="mailto:info@salonkatta.com" class="text-muted flex-grow-1 small text-decoration-none" style="text-align: justify;">
-                            info@salonkatta.com
-                        </a>
-                    </li>
-                    <li class="d-flex gap-2 align-items-center">
-                        <i class="bi bi-telephone-fill fs-5 flex-shrink-0"></i>
-                        <a href="tel:+918087435747" class="text-muted flex-grow-1 small text-decoration-none" style="text-align: justify;">
-                            +91 80874 35747
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12">
-                <div class="text-center small text-muted">
-                    Designed and developed by <a href="https://paarshinfotech.com" class="link-light text-decoration-none" target="_blank">Paarsh Infotech Pvt. Ltd.</a>
+            <!-- Follow Us -->
+            <div class="w-full md:w-1/4 mb-4">
+                <h5 class="font-bold text-lg mb-2">Follow Us</h5>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300" aria-label="Twitter">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
                 </div>
-                <div class="small text-center">Copyright © 2024 - 2025 College Portal</div>
             </div>
+            <!-- Contact Information -->
+            <div class="w-full md:w-1/4 mb-4">
+                <h5 class="font-bold text-lg mb-2">Contact Info</h5>
+                <div class="flex items-center mb-1">
+                    <i class="bi bi-geo-alt-fill text-indigo-500"></i>
+                    <a href="https://www.google.com/maps?q=Your+Address" class="text-gray-400 hover:text-indigo-500 transition duration-300 ml-2">Your Address</a>
+                </div>
+                <div class="flex items-center mb-1">
+                    <i class="bi bi-envelope-fill text-indigo-500"></i>
+                    <a href="mailto:your-email@example.com" class="text-gray-400 hover:text-indigo-500 transition duration-300 ml-2">your-email@example.com</a>
+                </div>
+                <div class="flex items-center">
+                    <i class="bi bi-telephone-fill text-indigo-500"></i>
+                    <a href="tel:+1234567890" class="text-gray-400 hover:text-indigo-500 transition duration-300 ml-2">+1 234 567 890</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 mt-4">
+            <p>Designed by <a href="https://yourwebsite.com" class="text-indigo-400 hover:text-indigo-500 transition duration-300">Paarsh Infotech Pvt. Ltd.</a></p>
+            <p class="text-sm">Copyright © 2024 - 2025 College Portal. All rights reserved.</p>
         </div>
     </div>
 </section>
