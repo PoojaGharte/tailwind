@@ -10,106 +10,270 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+     <!-- Include Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <!-- Include Owl Carousel CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 
 <body class="bg-gray-100 text-gray-800">
     <!-- Header Section -->
-    <header class="bg-white shadow">
-        <div class="container mx-auto">
-            <!-- Contact and Social Media -->
-            <div class="flex justify-between items-center py-2 px-6 border-b border-gray-200 bg-black shadow">
-                <div class="flex space-x-4">
-                    <a href="tel:+1234567890" class="text-gray-200 hover:text-indigo-500 flex items-center">
-                        <i class="fas fa-phone-alt mr-2"></i> +1234567890
-                    </a>
-                    <a href="mailto:info@college.com" class="text-gray-200 hover:text-indigo-500 flex items-center">
-                        <i class="fas fa-envelope mr-2"></i> info@college.com
-                    </a>
-                </div>
-                <div class="flex space-x-3">
-                    <a href="https://linkedin.com" class="text-blue-700 hover:text-indigo-500" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                    <a href="https://youtube.com" class="text-red-600 hover:text-indigo-500" aria-label="YouTube">
-                        <i class="fab fa-youtube fa-lg"></i>
-                    </a>
-                    <a href="https://instagram.com" class="text-pink-500 hover:text-indigo-500" aria-label="Instagram">
-                        <i class="fab fa-instagram fa-lg"></i>
-                    </a>
-                    <a href="https://twitter.com" class="text-blue-400 hover:text-indigo-500" aria-label="Twitter">
-                        <i class="fab fa-twitter fa-lg"></i>
-                    </a>
-                    <a href="https://facebook.com" class="text-blue-600 hover:text-indigo-500" aria-label="Facebook">
-                        <i class="fab fa-facebook fa-lg"></i>
-                    </a>
+    <header style="z-index: 1; position: relative;">
+    <div class="col-md-12 text-white bg-black py-2">
+        <!-- Contact and Social Media -->
+        <div class="container justify-content-between align-items-center d-flex">
+            <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 text-center md:text-left">
+                <a href="tel:+1234567890" class="text-gray-200 hover:text-indigo-500 flex items-center justify-center">
+                    <i class="fas fa-phone-alt mr-2"></i> +1234567890
+                </a>
+                <a href="mailto:info@college.com" class="text-gray-200 hover:text-indigo-500 flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i> info@college.com
+                </a>
+            </div>
+            <div class="flex space-x-8 mt-2 md:mt-0 justify-center">
+                <a href="https://facebook.com" class="text-blue-600 hover:text-indigo-500" aria-label="Facebook">
+                    <i class="fab fa-facebook fa-lg"></i>
+                </a>
+                <a href="https://linkedin.com" class="text-blue-700 hover:text-indigo-500" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a href="https://instagram.com" class="text-pink-500 hover:text-indigo-500" aria-label="Instagram">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+                <a href="https://twitter.com" class="text-blue-400 hover:text-indigo-500" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-lg"></i>
+                </a>
+                <a href="https://youtube.com" class="text-red-600 hover:text-indigo-500" aria-label="YouTube">
+                    <i class="fab fa-youtube fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav id="navbar" class="flex justify-between items-center py-2 px-4 bg-white">
+    <a href="#" class="text-xl font-bold text-indigo-600">College Info Portal</a>
+    <button id="mobileMenuButton" class="block md:hidden text-gray-600 focus:outline-none">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul id="navMenu" class="hidden md:flex space-x-4">
+        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Home</a></li>
+        <li class="relative group">
+            <a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Colleges</a>
+            <ul class="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Public Colleges</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Private Colleges</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Community Colleges</a></li>
+            </ul>
+        </li>
+        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">About Us</a></li>
+        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">FAQs</a></li>
+        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Blog</a></li>
+        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Contact Us</a></li>
+    </ul>
+    <div class="hidden md:flex items-center space-x-2">
+        <button id="toggleSearch" class="text-gray-600 hover:text-indigo-500 focus:outline-none" aria-label="Toggle Search">
+            <i class="fas fa-search"></i>
+        </button>
+        <div id="searchBar" class="relative hidden">
+            <input type="text" placeholder="Search..." class="border border-gray-300 rounded-md py-1 pl-3 pr-8 focus:outline-none focus:ring focus:ring-indigo-200" aria-label="Search" />
+            <i class="fas fa-search absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+        </div>
+        <button id="themeToggle" class="text-gray-600 hover:text-indigo-500 focus:outline-none" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-300 focus:outline-none">
+            Login
+        </button>
+    </div>
+</nav>
+
+           <!-- Full-Page Bootstrap Carousel -->
+<div id="fullPageCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('images/clgimg1.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Slide 1</h3>
+                <p>Description for slide 1.</p>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('images/clgimg4.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Slide 2</h3>
+                <p>Description for slide 2.</p>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('images/clgimg5.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Slide 3</h3>
+                <p>Description for slide 3.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Centered Search Bar -->
+    <div class="search-bar">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">
+                    <i class="fas fa-search"></i>
+                </span>
+            </div>
+            <input type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon1">
+            <div class="input-group-append">
+                <button class="btn btn-primary btn-search" type="button">Search</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Space after the slider -->
+<div class="container">
+    <div class="section-header">
+        <h4>Recommended Enginnering College</h4>
+        <a href="findmore1.html" class="btn btn-outline-primary">Find More</a>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="owl-carousel owl-theme">
+            <div class="item">
+            <div class="card">
+                <img src="images/clgimg1.jpg" class="card-img-top" alt="Image 1">
+                <div class="card-body">
+                    <h5 class="card-title">Section 1</h5>
+                    <p class="card-text">Some quick example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
                 </div>
             </div>
         </div>
-
-        <!-- Navigation Bar -->
-        <nav class="flex justify-between items-center py-4 px-6">
-            <!-- Logo/Brand Name -->
-            <a href="#" class="text-2xl font-bold text-indigo-600">College Info Portal</a>
-
-            <!-- Navigation Menu -->
-            <ul class="flex space-x-6">
-                <li><a href="#" class="text-gray-600 hover:text-indigo-500">Home</a></li>
-                <li class="relative group">
-                    <a href="#" class="text-gray-600 hover:text-indigo-500">Colleges</a>
-                    <ul class="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
-                        <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Public Colleges</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Private Colleges</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Community Colleges</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="text-gray-600 hover:text-indigo-500">About Us</a></li>
-                <li><a href="#" class="text-gray-600 hover:text-indigo-500">FAQs</a></li>
-                <li><a href="#" class="text-gray-600 hover:text-indigo-500">Blog</a></li>
-                <li><a href="#" class="text-gray-600 hover:text-indigo-500">Contact Us</a></li>
-            </ul>
-
-            <!-- Search Bar and Theme Toggle -->
-            <div class="flex items-center space-x-4">
-                <button id="toggleSearch" class="text-gray-600 hover:text-indigo-500 focus:outline-none" aria-label="Toggle Search">
-                    <i class="fas fa-search"></i>
-                </button>
-                <div id="searchBar" class="relative hidden">
-                    <input type="text" placeholder="Search..." class="border border-gray-300 rounded-md py-2 pl-4 pr-10 focus:outline-none focus:ring focus:ring-indigo-200" aria-label="Search" />
-                    <i class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                <div class="item">
+            <div class="card">
+                <img src="images/clgimg2.jpg" class="card-img-top" alt="Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Section 2</h5>
+                    <p class="card-text">Some quick example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
                 </div>
-                <button id="themeToggle" class="text-gray-600 hover:text-indigo-500 focus:outline-none" aria-label="Toggle Theme">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <a href="#" class="text-gray-600 hover:text-indigo-500">Login</a>
-                <a href="#" class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600">Sign Up</a>
             </div>
-        </nav>
-    </header>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img src="images/clgimg1.jpg" class="card-img-top" alt="Image 1">
+                <div class="card-body">
+                    <h5 class="card-title">Section 3</h5>
+                    <p class="card-text">Some quick example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+                <div class="item">
+            <div class="card">
+                <img src="images/clgimg2.jpg" class="card-img-top" alt="Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Section 4</h5>
+                    <p class="card-text">Some quick example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img src="images/clgimg1.jpg" class="card-img-top" alt="Image 1">
+                <div class="card-body">
+                    <h5 class="card-title">Section 5</h5>
+                    <p class="card-text">Some quick example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="card">
+                <img src="images/clgimg2.jpg" class="card-img-top" alt="Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Section 6</h5>
+                    <p class="card-text">Some quick example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img src="images/clgimg1.jpg" class="card-img-top" alt="Image 1">
+                <div class="card-body">
+                    <h5 class="card-title">Section 7</h5>
+                    <p class="card-text">Some quick example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat similar structure for cards 2-12 -->
+        <div class="item">
+            <div class="card">
+                <img src="images/clgimg2.jpg" class="card-img-top" alt="Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Section 8</h5>
+                    <p class="card-text">Some quick example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img src="images/clgimg1.jpg" class="card-img-top" alt="Image 1">
+                <div class="card-body">
+                    <h5 class="card-title">Section 9</h5>
+                    <p class="card-text">Some quick example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat similar structure for cards 2-12 -->
+        <div class="item">
+            <div class="card">
+                <img src="images/clgimg2.jpg" class="card-img-top" alt="Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Section 10</h5>
+                    <p class="card-text">Some quick example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img src="images/clgimg1.jpg" class="card-img-top" alt="Image 1">
+                <div class="card-body">
+                    <h5 class="card-title">Section 11</h5>
+                    <p class="card-text">Some quick example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+                <div class="item">
+            <div class="card">
+                <img src="images/clgimg2.jpg" class="card-img-top" alt="Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Section 12</h5>
+                    <p class="card-text">Some quick example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
 
-    <script>
-        // Search Bar Toggle Script
-        const searchButton = document.getElementById('toggleSearch');
-        const searchBar = document.getElementById('searchBar');
-
-        searchButton.addEventListener('click', () => {
-            searchBar.classList.toggle('hidden');
-        });
-
-        // Dark Mode Toggle Script
-        const themeToggle = document.getElementById('themeToggle');
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('bg-gray-800');
-            document.body.classList.toggle('text-white');
-            document.body.classList.toggle('bg-gray-100');
-            document.body.classList.toggle('text-gray-800');
-            
-            if (themeToggle.innerHTML.includes('moon')) {
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            } else {
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-            }
-        });
-    </script>
+<!-- Include jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Include Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Include Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>  
+    <!-- External JavaScript -->
+    <script src="script.js"> </script>
 </body>
 
 </html>
