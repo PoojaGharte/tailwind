@@ -11,278 +11,451 @@
     <!-- Font Awesome for Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-     <!-- Include Bootstrap CSS -->
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-     <!-- Include Owl Carousel CSS -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 </head>
 
 <body class="bg-gray-100 text-gray-800">
     <!-- Header Section -->
     <header style="z-index: 1; position: relative;">
-    <div class="col-md-12 text-white bg-black py-2">
-        <!-- Contact and Social Media -->
-        <div class="container justify-content-between align-items-center d-flex">
-            <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 text-center md:text-left">
-                <a href="tel:+1234567890" class="text-gray-200 hover:text-indigo-500 flex items-center justify-center">
-                    <i class="fas fa-phone-alt mr-2"></i> +1234567890
-                </a>
-                <a href="mailto:info@college.com" class="text-gray-200 hover:text-indigo-500 flex items-center justify-center">
-                    <i class="fas fa-envelope mr-2"></i> info@college.com
-                </a>
-            </div>
-            <div class="flex space-x-8 mt-2 md:mt-0 justify-center">
-                <a href="https://facebook.com" class="text-blue-600 hover:text-indigo-500" aria-label="Facebook">
-                    <i class="fab fa-facebook fa-lg"></i>
-                </a>
-                <a href="https://linkedin.com" class="text-blue-700 hover:text-indigo-500" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin fa-lg"></i>
-                </a>
-                <a href="https://instagram.com" class="text-pink-500 hover:text-indigo-500" aria-label="Instagram">
-                    <i class="fab fa-instagram fa-lg"></i>
-                </a>
-                <a href="https://twitter.com" class="text-blue-400 hover:text-indigo-500" aria-label="Twitter">
-                    <i class="fab fa-twitter fa-lg"></i>
-                </a>
-                <a href="https://youtube.com" class="text-red-600 hover:text-indigo-500" aria-label="YouTube">
-                    <i class="fab fa-youtube fa-lg"></i>
-                </a>
+        <div class="col-md-12 text-white bg-black py-2">
+            <!-- Contact and Social Media -->
+            <div class="container justify-content-between align-items-center d-flex">
+                <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 text-center md:text-left">
+                    <a href="tel:+1234567890"
+                        class="text-gray-200 hover:text-indigo-500 flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i> +1234567890
+                    </a>
+                    <a href="mailto:info@college.com"
+                        class="text-gray-200 hover:text-indigo-500 flex items-center justify-center">
+                        <i class="fas fa-envelope mr-2"></i> info@college.com
+                    </a>
+                </div>
+                <div class="flex space-x-8 mt-2 md:mt-0 justify-center">
+                    <a href="https://facebook.com" class="text-blue-600 hover:text-indigo-500" aria-label="Facebook">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </a>
+                    <a href="https://linkedin.com" class="text-blue-700 hover:text-indigo-500" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    <a href="https://instagram.com" class="text-pink-500 hover:text-indigo-500" aria-label="Instagram">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="https://twitter.com" class="text-blue-400 hover:text-indigo-500" aria-label="Twitter">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </a>
+                    <a href="https://youtube.com" class="text-red-600 hover:text-indigo-500" aria-label="YouTube">
+                        <i class="fab fa-youtube fa-lg"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<nav id="navbar" class="flex justify-between items-center py-2 px-4 bg-white shadow-md">
-    <a href="#" class="text-xl font-bold text-indigo-600">College Info Portal</a>
-    <button id="mobileMenuButton" class="block md:hidden text-gray-600 focus:outline-none" aria-label="Toggle Menu">
-        <i class="fas fa-bars"></i>
-    </button>
-    <ul id="navMenu" class="hidden md:flex space-x-6">
-        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Home</a></li>
-        <li class="relative group">
-            <a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Colleges</a>
-            <ul class="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
-                <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Public Colleges</a></li>
-                <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Private Colleges</a></li>
-                <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Community Colleges</a></li>
-            </ul>
-        </li>
-        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">About Us</a></li>
-        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Contact Us</a></li>
-    </ul>
-    <div class="hidden md:flex items-center space-x-2">
-        <button id="toggleSearch" class="text-gray-600 hover:text-indigo-500 focus:outline-none" aria-label="Toggle Search">
-            <i class="fas fa-search"></i>
+    <nav id="navbar" class="flex justify-between items-center py-2 px-4 bg-white shadow-md">
+        <a href="#" class="text-xl font-bold text-indigo-600">College Info Portal</a>
+        <button id="mobileMenuButton" class="block md:hidden text-gray-600 focus:outline-none" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
         </button>
-        <div id="searchBar" class="relative hidden">
-            <input type="text" placeholder="Search..." class="border border-gray-300 rounded-md py-1 pl-3 pr-8 focus:outline-none focus:ring focus:ring-indigo-200" aria-label="Search" />
-            <i class="fas fa-search absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-        </div>
-        <button id="themeToggle" class="text-gray-600 hover:text-indigo-500 focus:outline-none" aria-label="Toggle Theme">
-            <i class="fas fa-moon"></i>
-        </button>
-        <button class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-300 focus:outline-none">
-            Login
-        </button>
-    </div>
-</nav>
-
-           <!-- Full-Page Bootstrap Carousel -->
-<div id="fullPageCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
-    <div class="carousel-inner">
-        <div class="carousel-item active" style="background-image: url('images/slide\ \(4\).jpg')">
-            <div class="carousel-caption d-none d-md-block">
-                <h3>Slide 1</h3>
-                <p>Description for slide 1.</p>
-            </div>
-        </div>
-        <div class="carousel-item" style="background-image: url('images/slide\ \(2\).jpg')">
-            <div class="carousel-caption d-none d-md-block">
-                <h3>Slide 2</h3>
-                <p>Description for slide 2.</p>
-            </div>
-        </div>
-        <div class="carousel-item" style="background-image: url('images/slide\ \(3\).jpg')">
-            <div class="carousel-caption d-none d-md-block">
-                <h3>Slide 3</h3>
-                <p>Description for slide 3.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Centered Search Bar -->
-    <div class="search-bar">
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">
-                    <i class="fas fa-search"></i>
-                </span>
-            </div>
-            <input type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon1">
-            <div class="input-group-append">
-                <button class="btn btn-primary btn-search" type="button">Search</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Recommended Engineering Colleges with Slider -->
-<div class="container">
-    <div class="section-header">
-        <h2>Recommended Colleges</h2>
-        <a href="findmore1.html" class="btn btn-outline-primary">Find More</a>
-    </div>
-
-    <!-- Gallery Section -->
-    <div class="owl-carousel owl-theme">
-        <!-- College 1 -->
-        <div class="item">
-            <div class="card">
-                <img src="./Images/slide (3).jpg" alt="ABC Medical College" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">ABC Medical College</h5>
-                    <p class="card-text">One of the top medical colleges known for advanced healthcare research and education.</p>
-                    <a href="abc-medical-college.html" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- College 2 -->
-        <div class="item">
-            <div class="card">
-                <img src="./Images/slide (2).jpg" alt="XYZ Management Institute" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">XYZ Management Institute</h5>
-                    <p class="card-text">Leading the way in business and management studies with a global perspective.</p>
-                    <a href="xyz-management-institute.html" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- College 3 -->
-        <div class="item">
-            <div class="card">
-                <img src="./Images/slide (1).jpg" alt="LMN Engineering College" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">LMN Engineering College</h5>
-                    <p class="card-text">A hub for engineering and technology innovation, producing top-tier engineers.</p>
-                    <a href="lmn-engineering-college.html" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- College 4 -->
-        <div class="item">
-            <div class="card">
-                <img src="./Images/slide (4).jpg" alt="PQR Arts & Science College" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">PQR Arts & Science College</h5>
-                    <p class="card-text">A multidisciplinary institution offering diverse courses in arts and sciences.</p>
-                    <a href="pqr-arts-science-college.html" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- College 5 -->
-        <div class="item">
-            <div class="card">
-                <img src="images/slide (1).jpg" alt="DEF Law College" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">DEF Law College</h5>
-                    <p class="card-text">Known for its excellence in legal education and advocacy.</p>
-                    <a href="def-law-college.html" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Add more colleges as needed -->
-    </div>
-</div>
-
-
-<section class="bg-gray-900 text-white py-4">
-    <div class="container mx-auto">
-        <div class="flex flex-col md:flex-row md:space-x-8">
-            <!-- Logo Section -->
-            <div class="w-full md:w-1/4 mb-4">
-                <h5 class="font-bold text-lg mb-2">Our Logo</h5>
-                <a href="#">
-                    <img src="path/to/logo.svg" alt="Your Project Logo" class="h-10 mb-2">
-                </a>
-                <p class="text-gray-400 text-sm">Your tagline or description.</p>
-            </div>
-            <!-- Quick Links -->
-            <div class="w-full md:w-1/4 mb-4">
-                <h5 class="font-bold text-lg mb-2">Quick Links</h5>
-                <ul class="space-y-1">
-                    <li>
-                        <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">Contact Us</a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">About Us</a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">Terms & Conditions</a>
-                    </li>
+        <ul id="navMenu" class="hidden md:flex space-x-6">
+            <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Home</a></li>
+            <li class="relative group">
+                <a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Colleges</a>
+                <ul class="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Public Colleges</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Private Colleges</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Community Colleges</a></li>
                 </ul>
+            </li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">About Us</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Contact Us</a></li>
+        </ul>
+        <div class="hidden md:flex items-center space-x-2">
+            <button id="toggleSearch" class="text-gray-600 hover:text-indigo-500 focus:outline-none"
+                aria-label="Toggle Search">
+                <i class="fas fa-search"></i>
+            </button>
+            <div id="searchBar" class="relative hidden">
+                <input type="text" placeholder="Search..."
+                    class="border border-gray-300 rounded-md py-1 pl-3 pr-8 focus:outline-none focus:ring focus:ring-indigo-200"
+                    aria-label="Search" />
+                <i class="fas fa-search absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
             </div>
-            <!-- Follow Us -->
-            <div class="w-full md:w-1/4 mb-4">
-                <h5 class="font-bold text-lg mb-2">Follow Us</h5>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300" aria-label="Facebook">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300" aria-label="Twitter">
-                        <i class="bi bi-twitter"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300" aria-label="Instagram">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300" aria-label="LinkedIn">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-                </div>
-            </div>
-            <!-- Contact Information -->
-            <div class="w-full md:w-1/4 mb-4">
-                <h5 class="font-bold text-lg mb-2">Contact Info</h5>
-                <div class="flex items-center mb-1">
-                    <i class="bi bi-geo-alt-fill text-indigo-500"></i>
-                    <a href="https://www.google.com/maps?q=Your+Address" class="text-gray-400 hover:text-indigo-500 transition duration-300 ml-2">Your Address</a>
-                </div>
-                <div class="flex items-center mb-1">
-                    <i class="bi bi-envelope-fill text-indigo-500"></i>
-                    <a href="mailto:your-email@example.com" class="text-gray-400 hover:text-indigo-500 transition duration-300 ml-2">your-email@example.com</a>
-                </div>
-                <div class="flex items-center">
-                    <i class="bi bi-telephone-fill text-indigo-500"></i>
-                    <a href="tel:+1234567890" class="text-gray-400 hover:text-indigo-500 transition duration-300 ml-2">+1 234 567 890</a>
-                </div>
-            </div>
-        </div>
-        <div class="text-center text-gray-500 mt-4">
-            <p>Designed by <a href="https://yourwebsite.com" class="text-indigo-400 hover:text-indigo-500 transition duration-300">Paarsh Infotech Pvt. Ltd.</a></p>
-            <p class="text-sm">Copyright © 2024 - 2025 College Portal. All rights reserved.</p>
-        </div>
-    </div>
-</section>
+            <button id="themeToggle" class="text-gray-600 hover:text-indigo-500 focus:outline-none"
+                aria-label="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <a href="login.html" target="_blank">
+                <button
+                    class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-300 focus:outline-none">
+                    Login
+                </button>
+            </a>
 
-<!-- Include jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<!-- Include Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- Include Owl Carousel JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>  
-    <!-- External JavaScript -->
-    <script src="script.js"> </script>
+        </div>
+    </nav>
+
+    <!-- Full-Page Bootstrap Carousel -->
+    <div id="fullPageCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('images/slide\ \(4\).jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Slide 1</h3>
+                    <p>Description for slide 1.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/slide\ \(2\).jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Slide 2</h3>
+                    <p>Description for slide 2.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/slide\ \(3\).jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Slide 3</h3>
+                    <p>Description for slide 3.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Centered Search Bar -->
+        <div class="search-bar flex items-center justify-center">
+            <div class="relative w-3/5">
+                <div class="flex rounded-full shadow-lg overflow-hidden">
+                    <span class="flex items-center justify-center px-4 bg-white border border-gray-300">
+                        <i class="fas fa-search text-gray-500"></i>
+                    </span>
+                    <input type="text"
+                        class="flex-grow py-3 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Search..." aria-label="Search">
+                    <button
+                        class="py-3 px-6 bg-blue-500 text-white font-semibold hover:bg-blue-600 transition-colors duration-300">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommended Colleges with Slider -->
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3 class="text-dark text-start text-center text-md-start my-3">Recommended Colleges</h3>
+                <a href="findmore1.html" class="btn btn-sm btn-primary">Find More</a>
+            </div>
+            <!-- Gallery Section -->
+            <div class="owl-carousel owl-theme" id="clg-carousel">
+                <!-- College 1 -->
+
+
+
+                <!-- Add more colleges as needed -->
+            </div>
+        </div>
+        <!-- Recommended Engineering Colleges with Slider -->
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3 class="text-dark text-start text-center text-md-start my-3">Recommended Engineering Colleges</h3>
+                <a href="findmore1.html" class="btn btn-sm btn-primary">Find More</a>
+            </div>
+            <!-- Gallery Section -->
+            <div class="owl-carousel owl-theme" id="clg-carousel2">
+                <!-- College 1 -->
+                <!-- Add more engineering colleges as needed -->
+            </div>
+        </div>
+        <!-- Recommended Diploma Colleges with Slider -->
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3 class="text-dark text-start text-center text-md-start my-3">Recommended Diploma Colleges</h3>
+                <a href="findmore1.html" class="btn btn-sm btn-primary">Find More</a>
+            </div>
+            <!-- Gallery Section -->
+            <div class="owl-carousel owl-theme" id="clg-carousel4">
+                <!-- College 1 -->
+                <!-- Add more diploma colleges as needed -->
+            </div>
+        </div>
+        <!-- Recommended Medical Colleges with Slider -->
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3 class="text-dark text-start text-center text-md-start my-3">Recommended Medical Colleges</h3>
+                <a href="findmore1.html" class="btn btn-sm btn-primary">Find More</a>
+            </div>
+            <!-- Gallery Section -->
+            <div class="owl-carousel owl-theme" id="clg-carousel3">
+                <!-- College 1 -->
+
+                <!-- Add more medical colleges as needed -->
+            </div>
+        </div>
+
+
+
+
+        <section class="bg-gray-900 text-white py-4">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row md:space-x-8">
+                    <!-- Logo Section -->
+                    <div class="w-full md:w-1/4 mb-4">
+                        <h5 class="font-bold text-lg mb-2">Our Logo</h5>
+                        <a href="#">
+                            <img src="path/to/logo.svg" alt="Your Project Logo" class="h-10 mb-2">
+                        </a>
+                        <p class="text-gray-400 text-sm">Your tagline or description.</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="w-full md:w-1/4 mb-4">
+                        <h5 class="font-bold text-lg mb-2">Quick Links</h5>
+                        <ul class="space-y-1">
+                            <li>
+                                <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">Contact
+                                    Us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">About
+                                    Us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">Privacy
+                                    Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">Terms &
+                                    Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Follow Us -->
+                    <div class="w-full md:w-1/4 mb-4">
+                        <h5 class="font-bold text-lg mb-2">Follow Us</h5>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300"
+                                aria-label="Facebook">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300"
+                                aria-label="Twitter">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300"
+                                aria-label="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300"
+                                aria-label="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Contact Information -->
+                    <div class="w-full md:w-1/4 mb-4">
+                        <h5 class="font-bold text-lg mb-2">Contact Info</h5>
+                        <div class="flex items-center mb-1">
+                            <i class="bi bi-geo-alt-fill text-indigo-500"></i>
+                            <a href="https://www.google.com/maps?q=Your+Address"
+                                class="text-gray-400 hover:text-indigo-500 transition duration-300 ml-2">Your
+                                Address</a>
+                        </div>
+                        <div class="flex items-center mb-1">
+                            <i class="bi bi-envelope-fill text-indigo-500"></i>
+                            <a href="mailto:your-email@example.com"
+                                class="text-gray-400 hover:text-indigo-500 transition duration-300 ml-2">your-email@example.com</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="bi bi-telephone-fill text-indigo-500"></i>
+                            <a href="tel:+1234567890"
+                                class="text-gray-400 hover:text-indigo-500 transition duration-300 ml-2">+1 234 567
+                                890</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-gray-500 mt-4">
+                    <p>Designed by <a href="https://yourwebsite.com"
+                            class="text-indigo-400 hover:text-indigo-500 transition duration-300">Paarsh Infotech Pvt.
+                            Ltd.</a></p>
+                    <p class="text-sm">Copyright © 2024 - 2025 College Portal. All rights reserved.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Include jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Include Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Include Owl Carousel JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <!-- External JavaScript -->
+        <script src="script.js"> </script>
+
+        <script>
+            const recommendedClgList = [
+                {
+                    imgPath: 'Images/slide (3).jpg',
+                    name: 'ABC Medical College',
+                    desc: 'One of the top medical colleges known for advanced healthcare research and education.',
+                },
+                {
+                    imgPath: 'Images/slide (2).jpg',
+                    name: 'XYZ Management Institute',
+                    desc: 'Leading the way in business and management studies with a global perspective.',
+                },
+                {
+                    imgPath: 'Images/slide (1).jpg',
+                    name: 'LMN Engineering College',
+                    desc: 'A hub for engineering and technology innovation, producing top-tier engineers.',
+                },
+                {
+                    imgPath: 'Images/slide (4).jpg',
+                    name: 'PQR Arts & Science College',
+                    desc: 'A multidisciplinary institution offering diverse courses in arts and sciences.',
+                },
+                {
+                    imgPath: 'images/slide (1).jpg',
+                    name: 'DEF Law College',
+                    desc: 'Known for its excellence in legal education and advocacy.',
+                },
+                // Duplicate entries can be removed or added as needed.
+            ];
+
+
+            const recommendedEnggClgList = [
+                {
+                    imgPath: 'images/slide (1).jpg',
+                    name: 'ABC Engineering College',
+                    desc: 'A top-ranked institution known for its cutting-edge engineering programs and research facilities.',
+                },
+                {
+                    imgPath: 'images/slide (2).jpg',
+                    name: 'XYZ Institute of Technology',
+                    desc: 'Offering comprehensive technology programs with a focus on innovation and entrepreneurship.',
+                },
+                {
+                    imgPath: 'images/slide (3).jpg',
+                    name: 'LMN College of Engineering',
+                    desc: 'Renowned for producing world-class engineers and leading the way in technology education.',
+                },
+                {
+                    imgPath: 'images/slide (4).jpg',
+                    name: 'PQR Engineering Institute',
+                    desc: 'A premier institution offering specialized engineering programs with global outreach.',
+                },
+                {
+                    imgPath: 'images/slide (2).jpg', // Note: This image path is repeated; consider using a unique image if possible.
+                    name: 'DEF College of Technology',
+                    desc: 'Known for innovation in engineering and its commitment to shaping future tech leaders.',
+                },
+            ];
+
+            const recommendedDiplomaClgList = [
+                {
+                    imgPath: 'images/library.jpg',
+                    name: 'ABC Diploma College',
+                    desc: 'A renowned institution offering diverse diploma programs in engineering and technology.',
+                },
+                {
+                    imgPath: 'images/Mordanclassroom.jpg',
+                    name: 'XYZ Polytechnic Institute',
+                    desc: 'Focusing on practical skills, this institute provides a comprehensive diploma education.',
+                },
+                {
+                    imgPath: 'images/Sport.jpg',
+                    name: 'LMN Technical College',
+                    desc: 'A leader in technical education, offering diploma programs that meet industry standards.',
+                },
+                {
+                    imgPath: 'images/slide (4).jpg',
+                    name: 'PQR Engineering Polytechnic',
+                    desc: 'Offering specialized diploma courses in engineering with a focus on hands-on training.',
+                },
+                {
+                    imgPath: 'images/slide (2).jpg',
+                    name: 'DEF Institute of Technology',
+                    desc: 'Known for its innovative diploma programs that prepare students for successful careers.',
+                },
+            ];
+
+            const medicalColleges = [
+                {
+                    imgPath: 'images/Sport.jpg',
+                    name: 'ABC Medical College',
+                    desc: 'Renowned for its outstanding medical programs and state-of-the-art facilities.',
+                    link: 'abc-medical-college.html'
+                },
+                {
+                    imgPath: 'images/Mordanclassroom.jpg',
+                    name: 'XYZ Institute of Medicine',
+                    desc: 'Offers comprehensive medical training with a focus on research and patient care.',
+                    link: 'xyz-institute-of-medicine.html'
+                },
+                {
+                    imgPath: 'images/slide (2).jpg',
+                    name: 'LMN School of Medicine',
+                    desc: 'A leading institution known for its commitment to excellence in medical education.',
+                    link: 'lmn-school-of-medicine.html'
+                },
+                {
+                    imgPath: 'images/library.jpg',
+                    name: 'PQR Medical Institute',
+                    desc: 'Known for its advanced training programs and research opportunities in healthcare.',
+                    link: 'pqr-medical-institute.html'
+                },
+                {
+                    imgPath: 'images/slide (1).jpg',
+                    name: 'DEF College of Medicine',
+                    desc: 'Offers an innovative curriculum with a strong emphasis on practical experience.',
+                    link: 'def-college-of-medicine.html'
+                },
+            ];
+
+
+
+
+
+            const generateCard = (data) => {
+                return `
+            <div class="item">
+                <div class="card">
+                    <img src="${data.imgPath}" alt="ABC Medical College" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">${data.name}</h5>
+                        <p class="card-text">${data.desc}</p>
+                    </div>
+                <div class="mb-4 w-full flex justify-center item-center" >
+                    <a href="learnmore.html" class="btn btn-sm btn-outline-primary stretched-link " tabindex="-1">Learn More</a> 
+                    </div>
+                </div>
+            </div>
+    `
+            }
+
+            for (let index = 0; index < recommendedClgList.length; index++) {
+                const element = recommendedClgList[index];
+                document.getElementById('clg-carousel').innerHTML += generateCard(element)
+            }
+            for (let index = 0; index < recommendedEnggClgList.length; index++) {
+                const element = recommendedEnggClgList[index];
+                document.getElementById('clg-carousel2').innerHTML += generateCard(element)
+            }
+            for (let index = 0; index < recommendedDiplomaClgList.length; index++) {
+                const element = recommendedDiplomaClgList[index];
+                document.getElementById('clg-carousel3').innerHTML += generateCard(element)
+            }
+            for (let index = 0; index < medicalColleges.length; index++) {
+                const element = medicalColleges[index];
+                document.getElementById('clg-carousel4').innerHTML += generateCard(element)
+            }
+
+
+
+
+        </script>
 </body>
 
 </html>
