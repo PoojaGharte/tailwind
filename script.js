@@ -44,46 +44,49 @@ window.addEventListener('scroll', () => {
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-        $(document).ready(function () {
-            // Initialize Bootstrap carousel
-            $('#fullPageCarousel').carousel({
-                interval: 3000 // Slide every 3 seconds
-            });
-            
-            // Initialize Owl Carousel
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 4
-                    }
-                }
-            });
+//slider
+$(document).ready(function () {
+    // Function to set equal heights
+    function setEqualHeight() {
+        const cards = $('.owl-carousel .card');
+        let maxHeight = 0;
+
+        // Reset height
+        cards.css('height', 'auto');
+
+        // Find the maximum height
+        cards.each(function () {
+            maxHeight = Math.max(maxHeight, $(this).outerHeight());
         });
-        $('.owl-carousel').owlCarousel({
-            items: 4, // Display 4 cards at once
-            loop: true,
-            nav: true,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            responsive: {
-                0: {
-                    items: 1 // 1 card for mobile
-                },
-                600: {
-                    items: 2 // 2 cards for small tablets
-                },
-                1000: {
-                    items: 4 // 4 cards for desktops
-                }
+
+        // Set all cards to the maximum height
+        cards.css('height', maxHeight + 'px');
+    }
+
+    // Initialize Owl Carousel
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        responsive: {
+            0: {
+                items: 1,
+                slideBy: 1 // Slide one card at a time
+            },
+            600: {
+                items: 2,
+                slideBy: 1 // Slide one card at a time
+            },
+            1000: {
+                items: 4,
+                slideBy: 1 // Slide one card at a time
             }
-        });
-        
+        },
+        // Call setEqualHeight after initialization and resize
+        onInitialized: setEqualHeight,
+        onResized: setEqualHeight
+    });
+});
+
