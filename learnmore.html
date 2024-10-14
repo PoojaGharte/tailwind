@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clg file 1</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+     <!-- Include Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <!-- Include Owl Carousel CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+
+    <style>
+        
+        /* Custom styles */
+        .grey-background {
+            background-color: #f0f0f0; /* Light grey background */
+        }
+
+        .full-height {
+            height: 100%; /* Ensure full height for grid items */
+        }
+
+        /* Fixed image size */
+        .gallery-image {
+            width: 100%; /* Full width within the grid item */
+            height: 200px; /* Fixed height */
+            object-fit: cover; /* Ensure the image covers the area without distortion */
+            border-radius: 0.5rem; /* Rounded corners */
+            transition: transform 0.3s ease; /* Smooth scaling transition */
+        }
+
+        /* Hover effect for gallery images */
+        .gallery-item {
+            position: relative; /* For positioning the overlay */
+            overflow: hidden; /* To hide overflow */
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        /* Overlay for the image name */
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 165, 0, 0.5); /* Orange overlay */
+            color: white; /* Text color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0; /* Start hidden */
+            transition: opacity 0.3s ease; /* Smooth transition */
+            border-radius: 0.5rem; /* Rounded corners for overlay */
+        }
+
+        .gallery-item:hover .image-overlay {
+            opacity: 1; /* Show on hover */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header Section -->
+    <header style="z-index: 1; position: relative;">
+    <div class="col-md-12 text-white bg-black py-2">
+        <!-- Contact and Social Media -->
+        <div class="container justify-content-between align-items-center d-flex">
+            <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 text-center md:text-left">
+                <a href="tel:+1234567890" class="text-gray-200 hover:text-indigo-500 flex items-center justify-center">
+                    <i class="fas fa-phone-alt mr-2"></i> +1234567890
+                </a>
+                <a href="mailto:info@college.com" class="text-gray-200 hover:text-indigo-500 flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i> info@college.com
+                </a>
+            </div>
+            <div class="flex space-x-8 mt-2 md:mt-0 justify-center">
+                <a href="https://facebook.com" class="text-blue-600 hover:text-indigo-500" aria-label="Facebook">
+                    <i class="fab fa-facebook fa-lg"></i>
+                </a>
+                <a href="https://linkedin.com" class="text-blue-700 hover:text-indigo-500" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a href="https://instagram.com" class="text-pink-500 hover:text-indigo-500" aria-label="Instagram">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+                <a href="https://twitter.com" class="text-blue-400 hover:text-indigo-500" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-lg"></i>
+                </a>
+                <a href="https://youtube.com" class="text-red-600 hover:text-indigo-500" aria-label="YouTube">
+                    <i class="fab fa-youtube fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav id="navbar" class="flex justify-between items-center py-2 px-4 bg-white">
+    <a href="#" class="text-xl font-bold text-indigo-600">College Info Portal</a>
+    <button id="mobileMenuButton" class="block md:hidden text-gray-600 focus:outline-none">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul id="navMenu" class="hidden md:flex space-x-4">
+        <li><a href="index.html" class="text-sm text-gray-600 hover:text-indigo-500">Home</a></li>
+        <li class="relative group">
+            <a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Colleges</a>
+            <ul class="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-48">
+                <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Public Colleges</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Private Colleges</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-indigo-100">Community Colleges</a></li>
+            </ul>
+        </li>
+        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">About Us</a></li>
+        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">FAQs</a></li>
+        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Blog</a></li>
+        <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-500">Contact Us</a></li>
+    </ul>
+    <div class="hidden md:flex items-center space-x-2">
+        <button id="toggleSearch" class="text-gray-600 hover:text-indigo-500 focus:outline-none" aria-label="Toggle Search">
+            <i class="fas fa-search"></i>
+        </button>
+        <div id="searchBar" class="relative hidden">
+            <input type="text" placeholder="Search..." class="border border-gray-300 rounded-md py-1 pl-3 pr-8 focus:outline-none focus:ring focus:ring-indigo-200" aria-label="Search" />
+            <i class="fas fa-search absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+        </div>
+        <button id="themeToggle" class="text-gray-600 hover:text-indigo-500 focus:outline-none" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-300 focus:outline-none">
+            Login
+        </button>
+    </div>
+</nav>
+
+<section class="container w-100 h-96 mx-auto my-10 px-4">
+        <img src="images/college_image.jpg" alt="College Image" class="w-full h-full object-cover object-center">
+    </section>
+    <div class="container mx-auto px-0 py-8"> <!-- Removed horizontal padding for full-width effect -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-0"> <!-- Set gap to 0 -->
+            <!-- First Grid with Text and Image -->
+            <div class="p-6 grey-background full-height flex flex-col"> <!-- Flex column layout -->
+                <h1 class="text-4xl font-bold mb-4">WELCOME TO Enginnering COLLEGE</h1>
+                <hr class="border-orange-500 border-t-2 mb-4" />
+                <p class="mb-4">
+                    Since its inception in 2005, Sandip Foundation Nashik had a vision of giving a Student-Centric,
+                    Life-Centric, and Career-Aligned Education to students. Recently, Sandip Foundation pioneered into junior
+                    colleges in Nashik Maharashtra with a distinctive concept of an integrated programme. Also, Sandip
+                    Foundation got recognition as the best college in Maharashtra with the prestigious affiliations of the
+                    All India Council of Technical Education (AICTE) and the Pune University.
+                </p>
+                <p class="mb-4">
+                    Our Sandip Global School & Junior College of Science and Commerce molds the student in a manner to cater
+                    to the needs of the Industry, Research, academic & streams to satisfy the variety and desires of the
+                    students.
+                </p>
+                <div class="flex space-x-4 mt-auto"> <!-- Flexbox for buttons with margin-top auto to push it down -->
+                    <a href="#" class="btn btn-primary">Explore About SGJC</a>
+                    <a href="#" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Second Grid with Full Image -->
+            <div class="p-0 m-0 full-height"> <!-- Remove padding and margin -->
+                <img src="images/slide (2).jpg" alt="Full Image" class="w-full h-full object-cover" /> <!-- Full width and height with object-cover -->
+            </div>
+        </div>
+    </div>
+   
+   <!-- Include Font Awesome in your HTML head -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+<section class="container w-5/6 mx-auto my-10 px-4">
+    <div class="bg-white p-8 rounded-lg shadow-md">
+        <h3 class="text-3xl font-bold text-gray-800 mb-4 text-center">Our Vision and Mission</h3>
+        
+        
+        <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+            <!-- Mission -->
+            <div class="flex-1 bg-blue-100 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                <div class="text-center mb-4">
+                    <i class="fas fa-bullseye text-blue-500 fa-3x"></i> <!-- Font Awesome icon for Mission -->
+                </div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-2 text-center">Our Mission</h4>
+                <p class="text-gray-700 text-center">To provide high-quality education that fosters academic and professional excellence, responsibility, and leadership.</p>
+            </div>
+            <!-- Vision -->
+            <div class="flex-1 bg-green-100 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                <div class="text-center mb-4">
+                    <i class="fas fa-eye text-green-500 fa-3x"></i> <!-- Font Awesome icon for Vision -->
+                </div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-2 text-center">Our Vision</h4>
+                <p class="text-gray-700 text-center">To provide high-quality education that fosters academic and professional excellence, responsibility, and leadership.</p>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+    
+    <!-- Campus Life and Facilities -->
+    <section class="container w-5/6 mx-auto my-10 px-4">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+            <h3 class="text-3xl font-bold mb-6 text-center text-gray-800">Campus Life & Facilities</h3>
+            <p class="text-gray-700 mb-4 text-center">
+                Experience a vibrant campus life filled with opportunities for growth, engagement, and connection. Our community offers:
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-200">
+                    <img src="./Images/Mordanclassroom.jpg" alt="Modern Classrooms" class="w-full h-32 object-cover rounded-t-lg mb-4">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Modern Classrooms & Labs</h4>
+                    <p class="text-gray-600">Equipped with the latest technology for an optimal learning experience.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-200">
+                    <img src="./Images/library.jpg" alt="On-Campus Library" class="w-full h-32 object-cover rounded-t-lg mb-4">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">On-Campus Library & Research Centers</h4>
+                    <p class="text-gray-600">A hub of knowledge and resources for your academic pursuits.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-200">
+                    <img src="./Images/Sport.jpg" alt="Sports & Fitness" class="w-full h-32 object-cover rounded-t-lg mb-4">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Sports & Fitness Centers</h4>
+                    <p class="text-gray-600">State-of-the-art facilities to keep you fit and active.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 hover:shadow-xl border border-gray-200">
+                    <img src="./Images/Dining.jpg" alt="Dining Facilities" class="w-full h-32 object-cover rounded-t-lg mb-4">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Student Housing & Dining Facilities</h4>
+                    <p class="text-gray-600">Comfortable accommodations and diverse dining options for all tastes.</p>
+                </div>
+            </div>
+            <!-- <p class="text-gray-700 mb-4 text-center">
+                Join us in experiencing a campus that supports your academic and personal growth!
+            </p> -->
+        </div>
+    </section>
+    
+<!-- Alumni Network -->
+<section class="container w-5/6 mx-auto my-10 px-4">
+    <div class="bg-gradient-to-r from-blue-500 to-purple-600 p-8 rounded-lg shadow-lg text-white">
+        <h3 class="text-3xl font-bold mb-4 text-center">Alumni Network</h3>
+        <p class="text-lg mb-6 text-center">
+            Join a strong and growing alumni network. Our graduates work at leading organizations, and through our alumni association, you can benefit from networking, mentoring, and exclusive career resources.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Alumni Testimonial 1 -->
+            <div class="bg-white text-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                <img class="w-16 h-16 rounded-full mx-auto mb-4" src="https://metbhujbalknowledgecity.ac.in/wp-content/uploads/2020/03/arpit-kale-150x150.jpg" alt="Arpeet Kale">
+                <h4 class="text-xl font-semibold text-center">Arpeet Kale</h4>
+                <p class="text-center">Lead Software Engineer - AI</p>
+                <p class="mt-2 text-gray-600 text-center">"The alumni network has been invaluable in connecting me with industry leaders and job opportunities."</p>
+            </div>
+            
+            <!-- Alumni Testimonial 2 -->
+            <div class="bg-white text-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                <img class="w-16 h-16 rounded-full mx-auto mb-4" src="https://metbhujbalknowledgecity.ac.in/wp-content/uploads/2020/03/khushbu-agrwal.jpg" alt="Khushbu Agrawal">
+                <h4 class="text-xl font-semibold text-center">Khushbu Agrawal</h4>
+                <p class="text-center">Big Data Analyst</p>
+                <p class="mt-2 text-gray-600 text-center">"Networking through the alumni association opened doors for me that I never thought possible."</p>
+            </div>
+
+            <!-- Alumni Testimonial 3 -->
+            <div class="bg-white text-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                <img class="w-16 h-16 rounded-full mx-auto mb-4" src="https://via.placeholder.com/150" alt="Alumni Placeholder">
+                <h4 class="text-xl font-semibold text-center">John Doe</h4>
+                <p class="text-center">Software Developer</p>
+                <p class="mt-2 text-gray-600 text-center">"Being part of this network has provided me with mentorship and growth opportunities."</p>
+            </div>
+        </div>
+
+        <div class="text-center mt-6">
+            <a href="#"
+                class="bg-white text-blue-500 font-bold py-2 px-4 rounded hover:bg-gray-100 transition">
+                Join the Alumni Network
+            </a>
+        </div>
+    </div>
+</section>
+
+    
+    <!-- Gallery Section -->
+    <div class="container mx-auto py-8">
+        <h2 class="text-center text-3xl font-bold mb-2">Campus Life</h2>
+        <p class="text-center mb-6">Explore the vibrant campus life through our facilities and activities.</p>
+
+        <!-- Filter Buttons -->
+        <div class="text-center mb-4">
+            <button class="btn btn-outline-primary filter-button" data-filter="all">All</button>
+            <button class="btn btn-outline-primary filter-button" data-filter="classroom">Classrooms</button>
+            <button class="btn btn-outline-primary filter-button" data-filter="laboratory">Laboratories</button>
+            <button class="btn btn-outline-primary filter-button" data-filter="library">Libraries</button>
+            <button class="btn btn-outline-primary filter-button" data-filter="hostel">Hostels</button>
+        </div>
+
+        <!-- Gallery Images -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <!-- Classroom Images -->
+            <div class="gallery-item classroom">
+                <img src="images/clgimg1.jpg" alt="Classroom" class="gallery-image" />
+                <div class="image-overlay">Classroom</div>
+            </div>
+            <div class="gallery-item classroom">
+                <img src="images/clgimg2.jpg" alt="Classroom" class="gallery-image" />
+                <div class="image-overlay">Classroom</div>
+            </div>
+            <div class="gallery-item classroom">
+                <img src="images/clgimg3.jpg" alt="Classroom" class="gallery-image" />
+                <div class="image-overlay">Classroom</div>
+            </div>
+            <div class="gallery-item classroom">
+                <img src="images/clgimg4.jpg" alt="Classroom" class="gallery-image" />
+                <div class="image-overlay">Classroom</div>
+            </div>
+            <!-- Laboratory Images -->
+            <div class="gallery-item laboratory">
+                <img src="images/clgimg5.jpg" alt="Laboratory" class="gallery-image" />
+                <div class="image-overlay">Laboratory</div>
+            </div>
+            <div class="gallery-item laboratory">
+                <img src="images/clgimg6.jpg" alt="Laboratory" class="gallery-image" />
+                <div class="image-overlay">Laboratory</div>
+            </div>
+            <div class="gallery-item laboratory">
+                <img src="images/clgimg7.jpg" alt="Laboratory" class="gallery-image" />
+                <div class="image-overlay">Laboratory</div>
+            </div>
+            <!-- Library Images -->
+            <div class="gallery-item library">
+                <img src="images/clgimg8.jpg" alt="Library" class="gallery-image" />
+                <div class="image-overlay">Library</div>
+            </div>
+            <div class="gallery-item library">
+                <img src="images/clgimg9.jpg" alt="Library" class="gallery-image" />
+                <div class="image-overlay">Library</div>
+            </div>
+            <!-- Hostel Images -->
+            <div class="gallery-item hostel">
+                <img src="images/clgimg1.jpg" alt="Hostel" class="gallery-image" />
+                <div class="image-overlay">Hostel</div>
+            </div>
+            <div class="gallery-item hostel">
+                <img src="images/clgimg4.jpg" alt="Hostel" class="gallery-image" />
+                <div class="image-overlay">Hostel</div>
+            </div>
+            <div class="gallery-item hostel">
+                <img src="images/clgimg3.jpg" alt="Hostel" class="gallery-image" />
+                <div class="image-overlay">Hostel</div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- addmission form -->
+
+
+    <section class="container w-5/6 mx-auto my-10 px-4">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+             <h2 class="text-2xl font-bold mb-6 text-center">College Admission Form</h2>
+                   <form class="space-y-4">
+            <!-- Full Name and Mobile Number on same line -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="mobile" class="block text-sm font-medium text-gray-700">Mobile Number</label>
+                    <input type="text" id="mobile" name="mobile" placeholder="Enter your mobile number" class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+            </div>
+
+            <!-- Email and Country on same line -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="country" class="block text-sm font-medium text-gray-700">Country</label>
+                    <select id="country" name="country" class="mt-1 block w-full px-3 py-2 border bg-white rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option>Select your country</option>
+                        <option>India</option>
+                        <option>Canada</option>
+                        <option>USA</option>
+                        <option>Australia</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- State and City on same line -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label for="state" class="block text-sm font-medium text-gray-700">State</label>
+                    <select id="state" name="state" class="mt-1 block w-full px-3 py-2 border bg-white rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option>Select your state</option>
+                        <option>Maharashtra</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="city" class="block text-sm font-medium text-gray-700">City</label>
+                    <select id="city" name="city" class="mt-1 block w-full px-3 py-2 border bg-white rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option>Select your city</option>
+                        <option>Nashik</option>
+                        <option>Pune</option>
+                        <option>Mumbai</option>
+                        <option>Yeola</option>
+                        <option>Niphad</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Field of Study and Specialization on the same line -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label for="field" class="block text-sm font-medium text-gray-700">Field of Study</label>
+                    <select id="field" name="field" class="mt-1 block w-full px-3 py-2 border bg-white rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option>Select your field</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="pharmacy">Pharmacy</option>
+                    </select>
+                </div>
+
+                <div class="hidden" id="specialization-dropdown">
+                    <label for="specialization" class="block text-sm font-medium text-gray-700">Specialization</label>
+                    <select id="specialization" name="specialization" class="mt-1 block w-full px-3 py-2 border bg-white rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option>Select specialization</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="flex justify-end">
+                <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">Submit</button>
+            </div>
+        </form>
+    
+</div>
+    <!-- Tailwind Script (for Dropdown Styling) -->
+    <script>
+        const fieldDropdown = document.getElementById('field');
+        const specializationDropdown = document.getElementById('specialization-dropdown');
+        const specializationSelect = document.getElementById('specialization');
+
+        fieldDropdown.addEventListener('change', function () {
+            specializationDropdown.classList.remove('hidden');
+            specializationSelect.innerHTML = ""; // Clear previous options
+
+            const value = this.value;
+
+            if (value === 'engineering') {
+                specializationSelect.innerHTML += <option value="civil">Bachelors of Civil</option>;
+                specializationSelect.innerHTML += <option value="it">Bachelors of IT</option>;
+                specializationSelect.innerHTML += <option value="computer">Computer Engineering</option>;
+                specializationSelect.innerHTML += <option value="mechanical">Mechanical Engineering</option>;
+                specializationSelect.innerHTML += <option value="electrical">Electrical Engineering</option>;
+            } else if (value === 'diploma') {
+                specializationSelect.innerHTML += <option value="diploma-it">Diploma in IT</option>;
+                specializationSelect.innerHTML += <option value="diploma-computer">Diploma in Computer</option>;
+                specializationSelect.innerHTML += <option value="diploma-mechanical">Diploma in Mechanical</option>;
+                specializationSelect.innerHTML += <option value="diploma-civil">Diploma in Civil</option>;
+            } else if (value === 'pharmacy') {
+                specializationSelect.innerHTML += <option value="pharmacy">Pharmacy</option>;
+            } else {
+                specializationDropdown.classList.add('hidden');
+            }
+        });
+    </script>
+    </section>
+ 
+
+    <!-- footer -->
+      <section class="bg-gray-900 text-white py-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row md:space-x-8">
+                <!-- Logo Section -->
+                <div class="w-full md:w-1/4 mb-4">
+                    <h5 class="font-bold text-lg mb-2">Our Logo</h5>
+                    <a href="#">
+                        <img src="path/to/logo.svg" alt="Your Project Logo" class="h-10 mb-2">
+                    </a>
+                    <p class="text-gray-400 text-sm">Your tagline or description.</p>
+                </div>
+                <!-- Quick Links -->
+                <div class="w-full md:w-1/4 mb-4">
+                    <h5 class="font-bold text-lg mb-2">Quick Links</h5>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300">Terms & Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Follow Us -->
+                <div class="w-full md:w-1/4 mb-4">
+                    <h5 class="font-bold text-lg mb-2">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300" aria-label="Twitter">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-500 transition duration-300" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Contact Information -->
+                <div class="w-full md:w-1/4 mb-4">
+                    <h5 class="font-bold text-lg mb-2">Contact Info</h5>
+                    <div class="flex items-center mb-1">
+                        <i class="bi bi-geo-alt-fill text-indigo-500"></i>
+                        <a href="https://www.google.com/maps?q=Your+Address" class="text-gray-400 hover:text-indigo-500 transition duration-300 ml-2">Your Address</a>
+                    </div>
+                    <div class="flex items-center mb-1">
+                        <i class="bi bi-envelope-fill text-indigo-500"></i>
+                        <a href="mailto:your-email@example.com" class="text-gray-400 hover:text-indigo-500 transition duration-300 ml-2">your-email@example.com</a>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="bi bi-telephone-fill text-indigo-500"></i>
+                        <a href="tel:+1234567890" class="text-gray-400 hover:text-indigo-500 transition duration-300 ml-2">+1 234 567 890</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-gray-500 mt-4">
+                <p>Designed by <a href="https://yourwebsite.com" class="text-indigo-400 hover:text-indigo-500 transition duration-300">Paarsh Infotech Pvt. Ltd.</a></p>
+                <p class="text-sm">Copyright © 2024 - 2025 College Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <script>
+        // JavaScript for filtering gallery images
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    <!-- Bootstrap JS and dependencies -->
+     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
